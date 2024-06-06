@@ -301,10 +301,84 @@ h3 {
    
     
 }
+.floating-menu {
+    position: fixed;
+    top: 50%;
+    right: 1px;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #222; /* Warna latar belakang hitam */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk memberi kedalaman */
+}
 
+.floating-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
+.floating-menu ul li {
+    margin-bottom: 10px;
+}
 
+.floating-menu ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: 'Poppins', sans-serif; /* Gunakan font Poppins */
+}
 
+.floating-menu ul li a:hover {
+    background-color: #333; /* Warna latar belakang yang sedikit lebih gelap saat dihover */
+}
 
-
-
+.floating-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .chat-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #007bff; /* Warna latar belakang ikon chat */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .chat-icon:hover {
+    background-color: #0056b3; /* Warna latar belakang ikon chat saat dihover */
+  }
+  
+  .chat-icon i {
+    color: #fff; /* Warna ikon chat */
+  }
+  
+  .chat-box {
+    display: none;
+    position: absolute;
+    bottom: 70px; /* Jarak antara icon dan chat box */
+    right: 0;
+    width: 300px;
+    max-height: 400px;
+    background-color: #f8f9fa; /* Warna latar belakang chat box */
+    border-radius: 10px;
+    overflow-y: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk memberi kedalaman */
+  }
+  
+  /* Animasi untuk menampilkan chat box */
+  .chat-box.show {
+    display: block;
+  }
+  
